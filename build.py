@@ -189,8 +189,8 @@ if OUT.exists(): shutil.rmtree(OUT)
 OUT.mkdir()
 for name, meta in PAGES.items():
   body = blocks[name]
-  # the contact form posts to Formspree once FORM_ID is set
-  body = body.replace('<form id="contact-form" novalidate>', '<form id="contact-form" action="https://formspree.io/f/FORM_ID" method="POST">')
+  # the contact form posts to Formspree, which emails james@oystershell.co.uk
+  body = body.replace('<form id="contact-form" novalidate>', '<form id="contact-form" action="https://formspree.io/f/xwlljvzl" method="POST"><input type="hidden" name="_subject" value="New enquiry from oystershell.co.uk">')
   body = body.replace('<input id="f-name" name="name"', '<input id="f-name" name="name"').replace('<input id="f-consent" type="checkbox" required>', '<input id="f-consent" name="consent" type="checkbox" required>')
   body = re.sub(r'<p class="form-note" id="form-note" role="status"></p>', '<p class="form-note" id="form-note" role="status"></p>', body)
   # each page's first visible heading is its h1; demote nothing else
