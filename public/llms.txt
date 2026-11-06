@@ -1,0 +1,65 @@
+# Oystershell Limited
+
+> UK commercial and sales consultancy for hospitality technology, based in Northampton. Founded 1999. Company number 03856081 (England and Wales). Contact: james@oystershell.co.uk.
+
+Oystershell leads sales and marketing for Kashing, a UK unattended contactless payments provider, and has over forty years of experience selling technology, music and payment systems to most of the larger hospitality retailers in the UK.
+
+## Services
+
+- [Contactless payments for pool tables, jukeboxes and vending](https://www.oystershell.co.uk/contactless/): Card and contactless payment readers for coin-operated machines: pool tables, jukeboxes, vending, laundrettes, kids rides, EV charging and parking. Delivered with Kashing.
+- [14.8V 40Ah lithium battery packs, UN38.3 certified](https://www.oystershell.co.uk/batteries/): Certified 592 Wh lithium-ion battery packs for machines with no mains socket: pool tables, kiosks and payment terminals. Smart SMBus fuel gauge, UN38.3 tested, shipped as dangerous goods.
+- [Refurbished digital jukeboxes and venue background music](https://www.oystershell.co.uk/jukeboxes/): Ex-venue digital jukeboxes refurbished for home bars and games rooms, trade batches for operators, and over forty years of background music and sound system experience.
+- [Hospitality management advice and product development](https://www.oystershell.co.uk/advice/): Commercial strategy, interim sales and marketing leadership, route to market and product development for technology, music and payments companies selling into UK hospitality.
+
+## Company
+
+- [About](https://www.oystershell.co.uk/about/): Oystershell Limited was founded in 1999 in Northampton. Its experience in UK hospitality sales, music and payments goes back to 1982.
+- [Experience](https://www.oystershell.co.uk/experience/): Forty years of UK hospitality technology: cashless payments, digital jukeboxes, background music, board leadership and field sales.
+- [Contact](https://www.oystershell.co.uk/contact/): Talk to Oystershell about contactless installs, battery packs, jukeboxes or commercial advice. Email james@oystershell.co.uk.
+
+## Frequently asked questions
+
+### What does Oystershell do?
+Oystershell is a UK commercial and sales consultancy for hospitality technology. It leads sales and marketing for Kashing, supplies certified lithium battery packs, sells refurbished digital jukeboxes, and advises companies selling into pubs, bars and leisure venues.
+
+### Where is Oystershell based?
+Oystershell Limited is based in Northampton and works across the UK. It is registered in England and Wales, company number 03856081.
+
+### Who does Oystershell work with?
+Technology, music and payments companies, machine operators and venue owners in UK hospitality, leisure and unattended retail.
+
+### Can a pool table take contactless payments?
+Yes. A contactless card reader can be fitted to a coin-operated pool table so players pay by card, phone or watch. Where there is no socket nearby, a battery pack powers the reader.
+
+### Which machines can take card payments?
+Pool tables, jukeboxes, vending machines, laundrette washers and dryers, kids rides, EV chargers and parking or forecourt machines.
+
+### Who provides the payment service?
+Payments are processed by Kashing Limited, which is authorised and regulated by the Financial Conduct Authority as a Small Payment Institution.
+
+### Who supplies UN38.3 certified battery packs for coin-op machines in the UK?
+Oystershell supplies smart lithium-ion battery packs, UN38.3 tested, for pool tables, kiosks, payment terminals and other machines that need to run without mains power.
+
+### What are the battery pack specifications?
+14.8 V nominal, 40 Ah typical capacity (592 Wh), 32 x 21700 cells in a 4S8P layout, 5 A maximum charge and discharge, 179 x 155 x 47 mm, about 2.4 kg, with an SMBus fuel gauge.
+
+### Can you make a pack to my specification?
+Yes. Packs can be built to your voltage, capacity, size and connector needs, with test reports for each design.
+
+### Where can I buy a refurbished digital jukebox for my home?
+Oystershell sells ex-pub digital jukeboxes, refurbished for home bars, games rooms and man caves. Current stock is listed on eBay and Facebook Marketplace.
+
+### Do you buy used jukeboxes?
+Yes. Oystershell buys surplus digital jukeboxes from operators and venues, in single units or in quantity.
+
+### Can you advise on background music for a venue?
+Yes. Oystershell has over forty years of experience in commercial background music, jukeboxes and sound installation for UK hospitality.
+
+### How can a technology company sell into UK pubs?
+Start with a clear proposition for operators and pub companies, the right commercial model, and introductions to the people who decide. Oystershell provides all three, from strategy to signed contract.
+
+### Do you offer interim sales and marketing leadership?
+Yes. Oystershell can act as the name and face of your sales function on a rolling contract, without a full-time hire.
+
+### Do you help with product development?
+Yes, from customer-side input to research and development, through hardware specification and certification, to venue pilots and launch.
