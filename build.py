@@ -196,7 +196,7 @@ for name, meta in PAGES.items():
   # each page's first visible heading is its h1; demote nothing else
   if name in ('privacy', 'terms'):
     body = re.sub(r'<h2>(Privacy policy|Terms of use)</h2>', r'<h1 class="h2">\1</h1>', body)
-  body = re.sub(r'<p class="(eyebrow grad[^"]*)">(.*?)</p>\s*<h1 class="h1"([^>]*)>', r'<h1 class="h1"\3><span class="\1 h1-kicker">\2</span>', body, count=1)
+  body = re.sub(r'<p class="(eyebrow grad[^"]*)">(.*?)</p>\s*<h1 class="h1"([^>]*)>', r'<h1 class="h1"\3><span class="\1 h1-kicker">\2</span> ', body, count=1)
   navp = fix_links(nav).replace(f'href="{meta["path"]}"', f'href="{meta["path"]}" aria-current="page"', 1) if name != 'home' else fix_links(nav)
   html = head(name, meta) + '\n<body>\n' + (draft + '\n' if DRAFT else '') + navp + '\n<main>\n' + fix_links(body) + faq_html(name) + '\n</main>\n' + fix_links(footer) + '\n' + script + '\n</body>\n</html>\n'
   dest = OUT / meta['path'].strip('/') / 'index.html' if name != 'home' else OUT / 'index.html'
