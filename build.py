@@ -132,7 +132,7 @@ script = '''<script>
   var menu=document.getElementById('menu'), btn=document.getElementById('menu-btn');
   btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
   [].forEach.call(document.querySelectorAll('.slot[data-src]'),function(f){
-    var img=new Image(); img.alt=f.dataset.alt||''; img.loading='lazy'; img.decoding='async';
+    var img=new Image(); img.alt=f.dataset.alt||''; img.decoding='async';
     img.onload=function(){f.innerHTML='';f.appendChild(img);};
     img.src=f.dataset.src;
   });
@@ -151,6 +151,15 @@ def fix_links(html):
     return m.group(0)
   html = re.sub(r'href="#([a-z-]+)"', rep, html)
   html = html.replace('data-src="images/', 'data-src="/images/')
+  # Photos that exist are written as real <img> tags so search engines see them without JavaScript.
+  def photo(m):
+    cls, src, alt = m.group(1), m.group(2), m.group(3)
+    f = ROOT / src.lstrip('/')
+    if not f.exists(): return m.group(0)
+    from PIL import Image
+    w, h = Image.open(f).size
+    return f'<figure class="{cls}"><img src="{src}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"></figure>'
+  html = re.sub(r'<figure class="(slot[^"]*)" data-src="([^"]+)" data-alt="([^"]*)">.*?</figure>', photo, html)
   return html
 
 def head(name, meta):

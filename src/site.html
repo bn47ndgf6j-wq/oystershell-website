@@ -409,12 +409,12 @@ footer .reg{max-width:80ch;line-height:1.6}
         <p class="lede">Fewer people carry cash. A contactless reader turns every passer-by into a customer, with sales reporting from day one.</p>
       </div>
         <div class="gallery">
-        <figure class="slot big" data-src="images/contactless-1.jpg" data-alt="Contactless reader fitted to a pub pool table"><div class="ph-img"><span class="fn">contactless-1.jpg</span><span class="sh">Hero shot: reader fitted to a pool table in a busy pub</span></div></figure>
-        <figure class="slot" data-src="images/contactless-2.jpg" data-alt="Customer tapping a phone to pay"><div class="ph-img"><span class="fn">contactless-2.jpg</span><span class="sh">Close-up: phone or card tapping the reader</span></div></figure>
-        <figure class="slot" data-src="images/contactless-3.jpg" data-alt="Jukebox with a contactless reader"><div class="ph-img"><span class="fn">contactless-3.jpg</span><span class="sh">Jukebox with reader fitted</span></div></figure>
-        <figure class="slot" data-src="images/contactless-4.jpg" data-alt="Vending machine with a contactless reader"><div class="ph-img"><span class="fn">contactless-4.jpg</span><span class="sh">Vending or kids ride with reader</span></div></figure>
-        <figure class="slot" data-src="images/contactless-5.jpg" data-alt="Laundrette machines with contactless payment"><div class="ph-img"><span class="fn">contactless-5.jpg</span><span class="sh">Laundrette or car park install</span></div></figure>
-        <figure class="slot" data-src="images/contactless-6.jpg" data-alt="Sales dashboard on a laptop"><div class="ph-img"><span class="fn">contactless-6.jpg</span><span class="sh">Sales reporting on screen</span></div></figure>
+        <figure class="slot big" data-src="images/contactless-1.jpg" data-alt="Kashing contactless reader fitted beside the coin mech on a pub pool table"><div class="ph-img"><span class="fn">contactless-1.jpg</span><span class="sh">Hero shot: reader fitted to a pool table in a busy pub</span></div></figure>
+        <figure class="slot" data-src="images/contactless-2.jpg" data-alt="Prize vending machine with a Tap Here To Pay contactless reader"><div class="ph-img"><span class="fn">contactless-2.jpg</span><span class="sh">Close-up: phone or card tapping the reader</span></div></figure>
+        <figure class="slot" data-src="images/contactless-3.jpg" data-alt="Digital jukebox fitted with a Kashing contactless reader"><div class="ph-img"><span class="fn">contactless-3.jpg</span><span class="sh">Jukebox with reader fitted</span></div></figure>
+        <figure class="slot" data-src="images/contactless-4.jpg" data-alt="Capsule prize machine fitted with a Kashing contactless reader"><div class="ph-img"><span class="fn">contactless-4.jpg</span><span class="sh">Vending or kids ride with reader</span></div></figure>
+        <figure class="slot" data-src="images/contactless-5.jpg" data-alt="Laundrette washing machines fitted with Kashing contactless readers"><div class="ph-img"><span class="fn">contactless-5.jpg</span><span class="sh">Laundrette or car park install</span></div></figure>
+        <figure class="slot" data-src="images/contactless-6.jpg" data-alt="Kashing online portal showing connected payment devices"><div class="ph-img"><span class="fn">contactless-6.jpg</span><span class="sh">Sales reporting on screen</span></div></figure>
         </div>
     </div>
   </section>
@@ -754,7 +754,7 @@ footer .reg{max-width:80ch;line-height:1.6}
 
   // Swap each placeholder for its real photo once images/<page>-<n>.jpg is uploaded.
   [].forEach.call(document.querySelectorAll('.slot[data-src]'),function(f){
-    var img=new Image(); img.alt=f.dataset.alt||''; img.loading='lazy';
+    var img=new Image(); img.alt=f.dataset.alt||'';
     img.onload=function(){f.innerHTML='';f.appendChild(img);};
     img.src=f.dataset.src;
   });

@@ -382,7 +382,7 @@ footer .reg{max-width:80ch;line-height:1.6}
   var menu=document.getElementById('menu'), btn=document.getElementById('menu-btn');
   btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
   [].forEach.call(document.querySelectorAll('.slot[data-src]'),function(f){
-    var img=new Image(); img.alt=f.dataset.alt||''; img.loading='lazy'; img.decoding='async';
+    var img=new Image(); img.alt=f.dataset.alt||''; img.decoding='async';
     img.onload=function(){f.innerHTML='';f.appendChild(img);};
     img.src=f.dataset.src;
   });
