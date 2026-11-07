@@ -71,7 +71,7 @@ def org_ld():
     '@type': ['Organization', 'LocalBusiness'], '@id': SITE + '/#org',
     'name': 'Oystershell Limited', 'alternateName': 'Oystershell', 'url': SITE + '/',
     'logo': SITE + '/logo-horizontal-960@2x.png', 'image': SITE + '/og-image-1200x630.png',
-    'email': 'james@oystershell.co.uk', 'foundingDate': '1999-10-08', 'founder': {'@type': 'Person', 'name': 'James Luck'},
+    'email': 'james@oystershell.co.uk', 'foundingDate': '1999-10-08', 'founder': {'@type': 'Person', 'name': 'James Luck', 'image': SITE + '/images/founder-james-luck.jpg', 'jobTitle': 'Founder and Director'},
     'identifier': {'@type': 'PropertyValue', 'propertyID': 'Companies House', 'value': '03856081'},
     'address': {'@type': 'PostalAddress', 'streetAddress': '3 Neale Close, Weston Favell', 'addressLocality': 'Northampton', 'postalCode': 'NN3 3DB', 'addressCountry': 'GB'},
     'areaServed': 'GB',
@@ -150,7 +150,7 @@ def fix_links(html):
     if target in PAGES: return f'href="{PAGES[target]["path"]}"'
     return m.group(0)
   html = re.sub(r'href="#([a-z-]+)"', rep, html)
-  html = html.replace('data-src="images/', 'data-src="/images/')
+  html = html.replace('data-src="images/', 'data-src="/images/').replace('src="images/', 'src="/images/')
   # Photos that exist are written as real <img> tags so search engines see them without JavaScript.
   def photo(m):
     cls, src, alt = m.group(1), m.group(2), m.group(3)
