@@ -158,8 +158,17 @@ def fix_links(html):
     if not f.exists(): return m.group(0)
     from PIL import Image
     w, h = Image.open(f).size
-    return f'<figure class="{cls}"><img src="{src}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"></figure>'
+    import hashlib
+    v = hashlib.md5(f.read_bytes()).hexdigest()[:8]
+    return f'<figure class="{cls}"><img src="{src}?v={v}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"></figure>'
   html = re.sub(r'<figure class="(slot[^"]*)" data-src="([^"]+)" data-alt="([^"]*)">.*?</figure>', photo, html)
+  # Version every other local image too, so a replaced photo is never stuck in a browser cache.
+  def ver(m):
+    f = ROOT / m.group(1).lstrip('/')
+    if not f.exists(): return m.group(0)
+    import hashlib
+    return f'src="{m.group(1)}?v={hashlib.md5(f.read_bytes()).hexdigest()[:8]}"'
+  html = re.sub(r'(?<![-\w])src="(/images/[^"?]+)"', ver, html)
   return html
 
 def head(name, meta):
