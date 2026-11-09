@@ -31,12 +31,16 @@ PAGES = {
   'experience': dict(path='/experience/', title='Experience | Oystershell',
     desc='Forty years of UK hospitality technology: cashless payments, digital jukeboxes, background music, board leadership and field sales.'),
   'reviews': dict(path='/reviews/', title='Client reviews | Oystershell',
-    desc='What clients say about working with Oystershell.', noindex=True),
+    desc='What clients say about working with Oystershell.', noindex=True, hidden=True),
   'contact': dict(path='/contact/', title='Contact Oystershell | Book a call',
     desc='Talk to Oystershell about contactless installs, battery packs, jukeboxes or commercial advice. Email james@oystershell.co.uk.'),
   'privacy': dict(path='/privacy/', title='Privacy policy | Oystershell', desc='How Oystershell Limited collects and uses personal information.'),
   'terms': dict(path='/terms/', title='Terms of use | Oystershell', desc='Terms of use for the Oystershell Limited website.'),
 }
+
+# Pages switched off for now (set hidden=False above to publish them again).
+HIDDEN = {n for n, m in PAGES.items() if m.get('hidden')}
+for n in HIDDEN: del PAGES[n]
 
 FAQ = {
   'home': [
@@ -149,6 +153,9 @@ def fix_links(html):
     if target == 'sound-link': return 'href="/jukeboxes/#sound"'
     if target in PAGES: return f'href="{PAGES[target]["path"]}"'
     return m.group(0)
+  for n in HIDDEN:
+    html = re.sub(rf'<li><a href="#{n}">[^<]*</a></li>\s*', '', html)
+    html = re.sub(rf'<a href="#{n}">[^<]*</a>', '', html)
   html = re.sub(r'href="#([a-z-]+)"', rep, html)
   html = html.replace('data-src="images/', 'data-src="/images/').replace('src="images/', 'src="/images/')
   # Photos that exist are written as real <img> tags so search engines see them without JavaScript.
