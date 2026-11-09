@@ -13,7 +13,7 @@ ROOT = Path(__file__).parent
 SRC = (ROOT / 'src/site.html').read_text()
 OUT = ROOT / 'public'
 SITE = 'https://www.oystershell.co.uk'
-DRAFT = True  # set False at launch: removes the draft banner
+DRAFT = False  # set False at launch: removes the draft banner
 
 PAGES = {
   'home': dict(path='/', title='Oystershell | Hospitality sales consulting, contactless payments and battery power',
