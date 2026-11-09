@@ -193,6 +193,7 @@ def head(name, meta):
 <title>{meta['title']}</title>
 <meta name="description" content="{meta['desc']}">
 {robots}
+<meta name="google-site-verification" content="Y_KYuRKzOWq3Tvm2t-Am7WSV4LD6AYNBl92x9JVeQfY">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Oystershell">
