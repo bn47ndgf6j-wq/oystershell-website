@@ -138,6 +138,10 @@ section{padding-block:110px}
 .card:hover{transform:translateY(-2px);box-shadow:0 18px 40px -18px rgba(0,0,0,.16)}
 .card h3{font-size:24px;line-height:1.15}
 .card p{color:var(--muted-ink);font-size:16px}
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.pack img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:calc(var(--r-md) - 8px);margin-bottom:8px}
+.spec{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;margin:8px 0 0;font-size:15px}
+.spec dt{color:var(--muted-ink);font-weight:600}.spec dd{margin:0}
 .card ul{margin:4px 0 0;padding-left:18px;color:var(--muted-ink);font-size:15px;display:grid;gap:4px}
 .card .chev{margin-top:auto;padding-top:8px;font-size:16px}
 .card .tag{font-size:12px;font-weight:600;color:var(--blue);letter-spacing:.06em;text-transform:uppercase}
@@ -424,9 +428,9 @@ footer .reg{max-width:80ch;line-height:1.6}
       <div class="head"><p class="eyebrow">Where it works</p><h2 class="h2">If it takes coins, it can take cards.</h2></div>
       <ul class="chips light-chips"><li>Pool tables</li><li>Jukeboxes</li><li>Vending</li><li>Laundrettes</li><li>Kids' rides</li><li>EV charging</li><li>Parking and forecourts</li></ul>
       <div class="cards" style="margin-top:44px">
-        <article class="card"><span class="tag">Step one</span><h3>Survey</h3><p><span class="ph">We look at your machines and sites and recommend the right reader for each.</span></p></article>
-        <article class="card"><span class="tag">Step two</span><h3>Install</h3><p><span class="ph">Readers fitted and tested, with battery power where there's no socket.</span></p></article>
-        <article class="card"><span class="tag">Step three</span><h3>Go live</h3><p><span class="ph">Payments, reporting and support set up through Kashing.</span></p></article>
+        <article class="card"><span class="tag">Step one</span><h3>Survey</h3><p>We look at your machines and sites and recommend the right reader for each.</p></article>
+        <article class="card"><span class="tag">Step two</span><h3>Install</h3><p>Readers fitted and tested, with battery power where there's no socket.</p></article>
+        <article class="card"><span class="tag">Step three</span><h3>Go live</h3><p>Payments, reporting and support set up through Kashing.</p></article>
       </div>
     </div>
   </section>
@@ -439,7 +443,7 @@ footer .reg{max-width:80ch;line-height:1.6}
       <p class="eyebrow grad">2 · Lithium battery packs</p>
       <h1 class="h1" style="font-size:clamp(48px,8vw,96px)">Cut the cord.</h1>
       <p class="lede" style="margin:24px 0 0">Certified lithium battery packs for machines that need to run where there's no socket. Proven in the field on payment products, now available to other businesses.</p>
-      <div class="links" style="margin-top:34px"><a class="btn" href="#contact">Get a quote</a><a class="chev" href="#power-specs">See the 40 Ah pack</a></div>
+      <div class="links" style="margin-top:34px"><a class="btn" href="#contact">Get a quote</a><a class="chev" href="#power-specs">See both packs</a></div>
     </div>
   </header>
   <section>
@@ -475,15 +479,40 @@ footer .reg{max-width:80ch;line-height:1.6}
   </section>
   <section class="white" id="power-specs">
     <div class="wrap">
-      <div class="head"><p class="eyebrow">The pack</p><h2 class="h2">40 Ah. Smart. Certified.</h2></div>
-      <div class="bento">
-        <div class="tile wide"><span class="k">Stored energy</span><div><div class="big grad-num">592 Wh</div><p>14.8 V nominal, 40 Ah typical capacity, from 32 high-grade 21700 cells.</p></div></div>
-        <div class="tile ink"><span class="k">Fuel gauge</span><div><div class="mid">Knows its own charge.</div><p style="margin-top:10px">A smart management board reports charge, health and temperature to your machine over SMBus.</p></div></div>
-        <div class="tile"><span class="k">Transport</span><div><div class="mid">UN38.3 tested.</div><p>Shipped as dangerous goods through UPS, fully labelled, with test reports supplied.</p></div></div>
-        <div class="tile"><span class="k">Size and weight</span><div><div class="mid">179 × 155 × 47 mm</div><p>About 2.4 kg.</p></div></div>
-        <div class="tile"><span class="k">Made to spec</span><div><div class="mid">Your voltage. Your connector.</div><p>Packs built to your capacity, size and connector needs, with test reports for each design.</p></div></div>
+      <div class="head"><p class="eyebrow">The packs</p><h2 class="h2">20 Ah or 40 Ah. Smart. Certified.</h2></div>
+      <div class="packs">
+        <article class="card pack">
+          <img src="images/battery-20ah.jpg" alt="DNK-LTB4S4PC20 14.8 V 20 Ah lithium battery pack in its shipping box" width="740" height="555" loading="lazy" decoding="async">
+          <span class="tag">DNK-LTB4S4PC20</span><h3>20 Ah pack</h3>
+          <p>The slim pack for readers and lighter loads. 296 Wh from 16 cells.</p>
+          <dl class="spec">
+            <dt>Voltage</dt><dd>14.8 V nominal (16.8 V full, 10 V cut-off)</dd>
+            <dt>Capacity</dt><dd>20 Ah, 296 Wh</dd>
+            <dt>Cells</dt><dd>16 × 21700 (4S4P)</dd>
+            <dt>Current</dt><dd>4 A standard charge, 10 A max continuous discharge</dd>
+            <dt>Management</dt><dd>10 A protection board with SMBus fuel gauge</dd>
+            <dt>Size</dt><dd>180 × 75 × 50 mm</dd>
+            <dt>Weight</dt><dd>About 1.27 kg</dd>
+            <dt>Certification</dt><dd>UN38.3 tested by an accredited CNAS laboratory</dd>
+          </dl>
+        </article>
+        <article class="card pack">
+          <img src="images/battery-40ah.jpg" alt="DNK-LTB4S8PC40 Oystershell 14.8 V 40 Ah lithium battery pack with DC5521 and SMBus connectors" width="767" height="575" loading="lazy" decoding="async">
+          <span class="tag">DNK-LTB4S8PC40</span><h3>40 Ah pack</h3>
+          <p>Double the run time for busy machines. 592 Wh from 32 cells.</p>
+          <dl class="spec">
+            <dt>Voltage</dt><dd>14.8 V nominal</dd>
+            <dt>Capacity</dt><dd>40 Ah, 592 Wh</dd>
+            <dt>Cells</dt><dd>32 × 21700, 5,000 mAh (4S8P)</dd>
+            <dt>Current</dt><dd>5 A max charge and discharge</dd>
+            <dt>Management</dt><dd>5 A protection board with SMBus fuel gauge</dd>
+            <dt>Size</dt><dd>180 × 178 × 50 mm</dd>
+            <dt>Weight</dt><dd>About 2.5 kg</dd>
+            <dt>Certification</dt><dd>UN38.3 tested by an accredited CNAS laboratory</dd>
+          </dl>
+        </article>
       </div>
-      <p style="margin-top:28px;color:var(--muted-ink);max-width:62ch">Charge and discharge are limited to 5 A each. Works from −20 to 60 °C and charges between 0 and 50 °C. <span class="ph">Typical lead time and minimum order quantity.</span></p>
+      <p style="margin-top:28px;color:var(--muted-ink);max-width:62ch">Both packs use a DC5521 power plug and a 3.81 mm plug-in terminal for SMBus data, and ship as dangerous goods through UPS, fully labelled, with test reports supplied. Packs can also be built to your own capacity, size and connector needs.</p>
     </div>
   </section>
 </div>
@@ -515,7 +544,7 @@ footer .reg{max-width:80ch;line-height:1.6}
         </div>
       <div class="bento" style="margin-top:20px">
         <div class="tile ink wide"><span class="k">Where they come from</span><div><div class="mid">Straight from the venues.</div><p style="margin-top:10px">As pubs replace jukeboxes, we buy them back in quantity from operators we've known for decades. You know where yours has been.</p></div></div>
-        <div class="tile"><span class="k">Before it ships</span><div><div class="mid">Checked and refurbished.</div><p><span class="ph">What each machine gets: cleaning, testing, music set-up, warranty.</span></p></div></div>
+        <div class="tile"><span class="k">Before it ships</span><div><div class="mid">Checked and refurbished.</div><p>Every machine is cleaned, tested and set up with music before it leaves us.</p></div></div>
         <div class="tile"><span class="k">For homes</span><div><div class="mid">Buy one.</div><p>Current stock is listed on eBay and Facebook Marketplace.</p></div><div class="links" style="font-size:17px"><a class="chev" href="https://www.ebay.co.uk/usr/oystershelllimited" target="_blank" rel="noopener">Shop on eBay</a><a class="chev" href="https://www.facebook.com/marketplace/profile/100003958185279/" target="_blank" rel="noopener">Facebook</a></div></div>
         <div class="tile wide"><span class="k">For the trade</span><div><div class="mid">Buy ten.</div><p>Operators, resellers and event hire companies can buy in batches. We'll also buy your surplus machines.</p></div><div class="links" style="font-size:17px"><a class="chev" href="#contact">Trade enquiries</a></div></div>
       </div>
@@ -568,7 +597,7 @@ footer .reg{max-width:80ch;line-height:1.6}
         <article class="card"><span class="tag">Leadership</span><h3>Interim sales and marketing</h3><p>Senior sales leadership on a rolling contract.</p><ul><li>The name and face of your sales function</li><li>Key account management with large customers</li><li>Sales team coaching and development</li></ul><a class="chev" href="#contact">Discuss a project</a></article>
         <article class="card"><span class="tag">Access</span><h3>Route to hospitality</h3><p>Get in front of the people who decide.</p><ul><li>Introductions to brewers, pub companies and machine operators</li><li>Partner and reseller sell-in</li><li>Bid and proposal support for national accounts</li></ul><a class="chev" href="#contact">Discuss a project</a></article>
         <article class="card"><span class="tag">Launch</span><h3>Launch and sell-in</h3><p>Take a new product to market in the UK and Europe.</p><ul><li>Launch plans and channel strategy</li><li>Migrating customers between platforms</li><li>Acquisitions and partnerships, from approach to integration</li></ul><a class="chev" href="#contact">Discuss a project</a></article>
-        <article class="card"><span class="tag">How we start</span><h3>A first conversation</h3><p><span class="ph">A free 30-minute call to understand what you sell and whether we're the right fit. Day rate or monthly retainer after that.</span></p><a class="chev" href="#contact">Book a call</a></article>
+        <article class="card"><span class="tag">How we start</span><h3>A first conversation</h3><p>A free 30-minute call to understand what you sell and whether we're the right fit. Day rate or monthly retainer after that.</p><a class="chev" href="#contact">Book a call</a></article>
       </div>
     </div>
   </section>
@@ -659,8 +688,7 @@ footer .reg{max-width:80ch;line-height:1.6}
     <div class="wrap narrow">
       <p class="eyebrow">Legal</p>
       <h2>Privacy policy</h2>
-      <p class="meta">Last updated <span class="ph">[date of launch]</span></p>
-      <div class="notice">Template only. Have it checked before launch, and confirm whether Oystershell needs to pay the ICO data protection fee.</div>
+      <p class="meta">Last updated 9 November 2026</p>
 
       <h3>Who we are</h3>
       <p>Oystershell Limited ("Oystershell", "we") is the data controller for personal information collected through this website. We are registered in England and Wales, company number 03856081. Contact us about privacy at james@oystershell.co.uk.</p>
@@ -701,8 +729,7 @@ footer .reg{max-width:80ch;line-height:1.6}
     <div class="wrap narrow">
       <p class="eyebrow">Legal</p>
       <h2>Terms of use</h2>
-      <p class="meta">Last updated <span class="ph">[date of launch]</span></p>
-      <div class="notice">Template only. Consulting engagements should be covered by a separate signed agreement.</div>
+      <p class="meta">Last updated 9 November 2026</p>
 
       <h3>About these terms</h3>
       <p>These terms apply to your use of this website, which is run by Oystershell Limited, registered in England and Wales, company number 03856081.</p>

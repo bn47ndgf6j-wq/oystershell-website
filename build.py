@@ -20,8 +20,8 @@ PAGES = {
     desc='Oystershell is a UK commercial and sales consultancy for hospitality technology: contactless payment installs with Kashing, certified lithium battery packs, refurbished jukeboxes and management advice.'),
   'contactless': dict(path='/contactless/', title='Contactless payments for pool tables, jukeboxes and vending | Oystershell',
     desc='Card and contactless payment readers for coin-operated machines: pool tables, jukeboxes, vending, laundrettes, kids rides, EV charging and parking. Delivered with Kashing.'),
-  'batteries': dict(path='/batteries/', title='14.8V 40Ah lithium battery packs, UN38.3 certified | Oystershell',
-    desc='Certified 592 Wh lithium-ion battery packs for machines with no mains socket: pool tables, kiosks and payment terminals. Smart SMBus fuel gauge, UN38.3 tested, shipped as dangerous goods.'),
+  'batteries': dict(path='/batteries/', title='14.8V 20Ah and 40Ah lithium battery packs, UN38.3 certified | Oystershell',
+    desc='Certified 296 Wh and 592 Wh lithium-ion battery packs for machines with no mains socket: pool tables, kiosks and payment terminals. Smart SMBus fuel gauge, UN38.3 tested, shipped as dangerous goods.'),
   'jukeboxes': dict(path='/jukeboxes/', title='Refurbished digital jukeboxes and venue background music | Oystershell',
     desc='Ex-venue digital jukeboxes refurbished for home bars and games rooms, trade batches for operators, and over forty years of background music and sound system experience.'),
   'advice': dict(path='/advice/', title='Hospitality management advice and product development | Oystershell',
@@ -55,7 +55,7 @@ FAQ = {
   ],
   'batteries': [
     ('Who supplies UN38.3 certified battery packs for coin-op machines in the UK?', 'Oystershell supplies smart lithium-ion battery packs, UN38.3 tested, for pool tables, kiosks, payment terminals and other machines that need to run without mains power.'),
-    ('What are the battery pack specifications?', '14.8 V nominal, 40 Ah typical capacity (592 Wh), 32 x 21700 cells in a 4S8P layout, 5 A maximum charge and discharge, 179 x 155 x 47 mm, about 2.4 kg, with an SMBus fuel gauge.'),
+    ('What are the battery pack specifications?', 'Two 14.8 V packs with an SMBus fuel gauge. DNK-LTB4S4PC20: 20 Ah (296 Wh), 16 x 21700 cells (4S4P), 10 A max discharge, 180 x 75 x 50 mm, about 1.27 kg. DNK-LTB4S8PC40: 40 Ah (592 Wh), 32 x 21700 cells (4S8P), 5 A max charge and discharge, 180 x 178 x 50 mm, about 2.5 kg. Both are UN38.3 tested.'),
     ('Can you make a pack to my specification?', 'Yes. Packs can be built to your voltage, capacity, size and connector needs, with test reports for each design.'),
   ],
   'jukeboxes': [
@@ -86,10 +86,14 @@ def org_ld():
 def page_ld(name, meta):
   graph = [org_ld(), {'@type': 'WebPage', 'url': SITE + meta['path'], 'name': meta['title'], 'description': meta['desc'], 'isPartOf': {'@id': SITE + '/#org'}, 'inLanguage': 'en-GB'}]
   if name == 'batteries':
-    graph.append({'@type': 'Product', 'name': 'Oystershell 14.8 V 40 Ah smart lithium battery pack', 'brand': {'@id': SITE + '/#org'},
-      'description': '592 Wh lithium-ion pack, 32 x 21700 cells (4S8P), SMBus fuel gauge, UN38.3 tested.',
-      'additionalProperty': [{'@type': 'PropertyValue', 'name': n, 'value': v} for n, v in [
-        ('Nominal voltage', '14.8 V'), ('Capacity', '40 Ah'), ('Energy', '592 Wh'), ('Weight', '2.4 kg'), ('Dimensions', '179 x 155 x 47 mm'), ('Certification', 'UN38.3')]]})
+    for model, nm, desc, props in [
+      ('DNK-LTB4S4PC20', 'Oystershell 14.8 V 20 Ah smart lithium battery pack', '296 Wh lithium-ion pack, 16 x 21700 cells (4S4P), SMBus fuel gauge, UN38.3 tested.',
+       [('Nominal voltage', '14.8 V'), ('Capacity', '20 Ah'), ('Energy', '296 Wh'), ('Weight', '1.27 kg'), ('Dimensions', '180 x 75 x 50 mm'), ('Certification', 'UN38.3')]),
+      ('DNK-LTB4S8PC40', 'Oystershell 14.8 V 40 Ah smart lithium battery pack', '592 Wh lithium-ion pack, 32 x 21700 cells (4S8P), SMBus fuel gauge, UN38.3 tested.',
+       [('Nominal voltage', '14.8 V'), ('Capacity', '40 Ah'), ('Energy', '592 Wh'), ('Weight', '2.5 kg'), ('Dimensions', '180 x 178 x 50 mm'), ('Certification', 'UN38.3')])]:
+      graph.append({'@type': 'Product', 'name': nm, 'model': model, 'brand': {'@id': SITE + '/#org'}, 'description': desc,
+        'image': SITE + ('/images/battery-20ah.jpg' if '20' in model else '/images/battery-40ah.jpg'),
+        'additionalProperty': [{'@type': 'PropertyValue', 'name': n, 'value': v} for n, v in props]})
   services = {'contactless': 'Contactless payment installation for coin-operated machines',
               'advice': 'Hospitality management advice and product development',
               'jukeboxes': 'Refurbished digital jukeboxes and background music advice'}

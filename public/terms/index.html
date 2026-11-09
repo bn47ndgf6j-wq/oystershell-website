@@ -238,6 +238,10 @@ section{padding-block:110px}
 .card:hover{transform:translateY(-2px);box-shadow:0 18px 40px -18px rgba(0,0,0,.16)}
 .card h3{font-size:24px;line-height:1.15}
 .card p{color:var(--muted-ink);font-size:16px}
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px}
+.pack img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:calc(var(--r-md) - 8px);margin-bottom:8px}
+.spec{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;margin:8px 0 0;font-size:15px}
+.spec dt{color:var(--muted-ink);font-weight:600}.spec dd{margin:0}
 .card ul{margin:4px 0 0;padding-left:18px;color:var(--muted-ink);font-size:15px;display:grid;gap:4px}
 .card .chev{margin-top:auto;padding-top:8px;font-size:16px}
 .card .tag{font-size:12px;font-weight:600;color:var(--blue);letter-spacing:.06em;text-transform:uppercase}
@@ -348,8 +352,7 @@ footer .reg{max-width:80ch;line-height:1.6}
     <div class="wrap narrow">
       <p class="eyebrow">Legal</p>
       <h1 class="h2">Terms of use</h1>
-      <p class="meta">Last updated <span class="ph">[date of launch]</span></p>
-      <div class="notice">Template only. Consulting engagements should be covered by a separate signed agreement.</div>
+      <p class="meta">Last updated 9 November 2026</p>
 
       <h3>About these terms</h3>
       <p>These terms apply to your use of this website, which is run by Oystershell Limited, registered in England and Wales, company number 03856081.</p>
