@@ -8,7 +8,7 @@ Oystershell leads sales and marketing for Kashing, a UK unattended contactless p
 
 - [Contactless payments for pool tables, jukeboxes and vending](https://www.oystershell.co.uk/contactless/): Card and contactless payment readers for coin-operated machines: pool tables, jukeboxes, vending, laundrettes, kids rides, EV charging and parking. Delivered with Kashing.
 - [14.8V 20Ah and 40Ah lithium battery packs, UN38.3 certified](https://www.oystershell.co.uk/batteries/): Certified 296 Wh and 592 Wh lithium-ion battery packs for machines with no mains socket: pool tables, kiosks and payment terminals. Smart SMBus fuel gauge, UN38.3 tested, shipped as dangerous goods.
-- [Refurbished digital jukeboxes and venue background music](https://www.oystershell.co.uk/jukeboxes/): Ex-venue digital jukeboxes refurbished for home bars and games rooms, trade batches for operators, and over forty years of background music and sound system experience.
+- [Refurbished digital jukeboxes and venue background music](https://www.oystershell.co.uk/jukeboxes/): Ex-venue digital jukeboxes refurbished for home bars and games rooms, surplus stock bought from operators, and over forty years of background music and sound system experience.
 - [Hospitality management advice and product development](https://www.oystershell.co.uk/advice/): Commercial strategy, interim sales and marketing leadership, route to market and product development for technology, music and payments companies selling into UK hospitality.
 
 ## Company
@@ -41,7 +41,7 @@ Payments are processed by Kashing Limited, which is authorised and regulated by 
 Oystershell supplies smart lithium-ion battery packs, UN38.3 tested, for pool tables, kiosks, payment terminals and other machines that need to run without mains power.
 
 ### What are the battery pack specifications?
-Two 14.8 V packs with an SMBus fuel gauge. DNK-LTB4S4PC20: 20 Ah (296 Wh), 16 x 21700 cells (4S4P), 10 A max discharge, 180 x 75 x 50 mm, about 1.27 kg. DNK-LTB4S8PC40: 40 Ah (592 Wh), 32 x 21700 cells (4S8P), 5 A max charge and discharge, 180 x 178 x 50 mm, about 2.5 kg. Both are UN38.3 tested.
+Two 14.8 V packs with an SMBus fuel gauge. OS-LTB148020000: 20 Ah (296 Wh), 16 x 21700 cells (4S4P), 10 A max discharge, 180 x 75 x 50 mm, about 1.27 kg. OS-LTB4S8PC40: 40 Ah (592 Wh), 32 x 21700 cells (4S8P), 5 A max charge and discharge, 180 x 178 x 50 mm, about 2.5 kg. Both are UN38.3 tested.
 
 ### Can you make a pack to my specification?
 Yes. Packs can be built to your voltage, capacity, size and connector needs, with test reports for each design.
