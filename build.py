@@ -25,7 +25,9 @@ PAGES = {
   'jukeboxes': dict(path='/jukeboxes/', title='Refurbished digital jukeboxes and venue background music | Oystershell',
     desc='Ex-venue digital jukeboxes refurbished for home bars and games rooms, surplus stock bought from operators, and over forty years of background music and sound system experience.'),
   'advice': dict(path='/advice/', title='Hospitality management advice and product development | Oystershell',
-    desc='Commercial strategy, interim sales and marketing leadership, route to market and product development for technology, music and payments companies selling into UK hospitality.'),
+    desc='Commercial strategy, interim sales and marketing leadership, route to market, product development and AI advice for technology, music and payments companies selling into UK hospitality.'),
+  'ai': dict(path='/ai-strategy/', title='AI strategy and integration for hospitality | Oystershell',
+    desc='Practical AI strategy for UK hospitality businesses and their technology suppliers: smarter ordering and upsell, demand forecasting, ongoing marketing and secure, UK GDPR-compliant integration with specialist partners.'),
   'about': dict(path='/about/', title='About Oystershell | UK hospitality technology consultancy since 1999',
     desc='Oystershell Limited was founded in 1999 in Northampton. Its experience in UK hospitality sales, music and payments goes back to 1982.'),
   'experience': dict(path='/experience/', title='Experience | Oystershell',
@@ -66,7 +68,14 @@ FAQ = {
   'advice': [
     ('How can a technology company sell into UK pubs?', 'Start with a clear proposition for operators and pub companies, the right commercial model, and introductions to the people who decide. Oystershell provides all three, from strategy to signed contract.'),
     ('Do you offer interim sales and marketing leadership?', 'Yes. Oystershell can act as the name and face of your sales function on a rolling contract, without a full-time hire.'),
+    ('Do you advise on AI?', 'Yes. Every product and strategy project now looks at where AI could add features, sharpen decisions or keep marketing going, and where it would not pay back. See the AI strategy and integration page.'),
     ('Do you help with product development?', 'Yes, from customer-side input to research and development, through hardware specification and certification, to venue pilots and launch.'),
+  ],
+  'ai': [
+    ('How can AI help a pub, bar or hospitality business?', 'The most useful areas are ordering and upsell prompts, demand and staffing forecasts from trading data, review replies and social content written in the business voice and checked by a person, and chat or booking assistants that handle routine questions out of hours.'),
+    ('Do you need to be a large operator to use AI?', 'No. Many useful tools are low-cost subscriptions. The best start is one clear problem, piloted in one venue or product line and measured against a baseline.'),
+    ('Is it safe to use customer data with AI?', 'Only with the right controls. UK GDPR applies, payment and personal data should stay out of tools that do not need it, and staff need clear rules on what can be shared. Integrations should be reviewed by cyber security specialists before they connect to live systems.'),
+    ('Who does Oystershell work with on AI projects?', 'Oystershell works alongside specialist AI integration partners and cyber security providers, bringing them in where a project needs build or security expertise.'),
   ],
 }
 
@@ -80,7 +89,7 @@ def org_ld():
     'address': {'@type': 'PostalAddress', 'streetAddress': '3 Neale Close, Weston Favell', 'addressLocality': 'Northampton', 'postalCode': 'NN3 3DB', 'addressCountry': 'GB'},
     'areaServed': 'GB',
     'sameAs': ['https://www.linkedin.com/in/jamesluckoystershell/', 'https://www.ebay.co.uk/usr/oystershelllimited'],
-    'knowsAbout': ['Hospitality sales', 'Contactless payments', 'Unattended payments', 'Lithium battery packs', 'Digital jukeboxes', 'Background music', 'Product development'],
+    'knowsAbout': ['Hospitality sales', 'Contactless payments', 'Unattended payments', 'Lithium battery packs', 'Digital jukeboxes', 'Background music', 'Product development', 'AI strategy', 'AI integration'],
   }
 
 def page_ld(name, meta):
@@ -96,6 +105,7 @@ def page_ld(name, meta):
         'additionalProperty': [{'@type': 'PropertyValue', 'name': n, 'value': v} for n, v in props]})
   services = {'contactless': 'Contactless payment installation for coin-operated machines',
               'advice': 'Hospitality management advice and product development',
+              'ai': 'AI strategy and integration for hospitality businesses',
               'jukeboxes': 'Refurbished digital jukeboxes and background music advice'}
   if name in services:
     graph.append({'@type': 'Service', 'name': services[name], 'provider': {'@id': SITE + '/#org'}, 'areaServed': 'GB'})
@@ -273,7 +283,7 @@ Sitemap: https://www.oystershell.co.uk/sitemap.xml
 ''')
 llms = ['# Oystershell Limited', '', '> UK commercial and sales consultancy for hospitality technology, based in Northampton. Founded 1999. Company number 03856081 (England and Wales). Contact: james@oystershell.co.uk.', '',
   'Oystershell leads sales and marketing for Kashing, a UK unattended contactless payments provider, and has over forty years of experience selling technology, music and payment systems to most of the larger hospitality retailers in the UK.', '', '## Services', '']
-for n in ['contactless', 'batteries', 'jukeboxes', 'advice']:
+for n in ['contactless', 'batteries', 'jukeboxes', 'advice', 'ai']:
   llms.append(f'- [{PAGES[n]["title"].split(" | ")[0]}]({SITE}{PAGES[n]["path"]}): {PAGES[n]["desc"]}')
 llms += ['', '## Company', '', f'- [About]({SITE}/about/): {PAGES["about"]["desc"]}', f'- [Experience]({SITE}/experience/): {PAGES["experience"]["desc"]}', f'- [Contact]({SITE}/contact/): {PAGES["contact"]["desc"]}', '', '## Frequently asked questions', '']
 for n, qa in FAQ.items():

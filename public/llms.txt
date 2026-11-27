@@ -9,7 +9,8 @@ Oystershell leads sales and marketing for Kashing, a UK unattended contactless p
 - [Contactless payments for pool tables, jukeboxes and vending](https://www.oystershell.co.uk/contactless/): Card and contactless payment readers for coin-operated machines: pool tables, jukeboxes, vending, laundrettes, kids rides, EV charging and parking. Delivered with Kashing.
 - [14.8V 20Ah and 40Ah lithium battery packs, UN38.3 certified](https://www.oystershell.co.uk/batteries/): Certified 296 Wh and 592 Wh lithium-ion battery packs for machines with no mains socket: pool tables, kiosks and payment terminals. Smart SMBus fuel gauge, UN38.3 tested, shipped as dangerous goods.
 - [Refurbished digital jukeboxes and venue background music](https://www.oystershell.co.uk/jukeboxes/): Ex-venue digital jukeboxes refurbished for home bars and games rooms, surplus stock bought from operators, and over forty years of background music and sound system experience.
-- [Hospitality management advice and product development](https://www.oystershell.co.uk/advice/): Commercial strategy, interim sales and marketing leadership, route to market and product development for technology, music and payments companies selling into UK hospitality.
+- [Hospitality management advice and product development](https://www.oystershell.co.uk/advice/): Commercial strategy, interim sales and marketing leadership, route to market, product development and AI advice for technology, music and payments companies selling into UK hospitality.
+- [AI strategy and integration for hospitality](https://www.oystershell.co.uk/ai-strategy/): Practical AI strategy for UK hospitality businesses and their technology suppliers: smarter ordering and upsell, demand forecasting, ongoing marketing and secure, UK GDPR-compliant integration with specialist partners.
 
 ## Company
 
@@ -61,5 +62,20 @@ Start with a clear proposition for operators and pub companies, the right commer
 ### Do you offer interim sales and marketing leadership?
 Yes. Oystershell can act as the name and face of your sales function on a rolling contract, without a full-time hire.
 
+### Do you advise on AI?
+Yes. Every product and strategy project now looks at where AI could add features, sharpen decisions or keep marketing going, and where it would not pay back. See the AI strategy and integration page.
+
 ### Do you help with product development?
 Yes, from customer-side input to research and development, through hardware specification and certification, to venue pilots and launch.
+
+### How can AI help a pub, bar or hospitality business?
+The most useful areas are ordering and upsell prompts, demand and staffing forecasts from trading data, review replies and social content written in the business voice and checked by a person, and chat or booking assistants that handle routine questions out of hours.
+
+### Do you need to be a large operator to use AI?
+No. Many useful tools are low-cost subscriptions. The best start is one clear problem, piloted in one venue or product line and measured against a baseline.
+
+### Is it safe to use customer data with AI?
+Only with the right controls. UK GDPR applies, payment and personal data should stay out of tools that do not need it, and staff need clear rules on what can be shared. Integrations should be reviewed by cyber security specialists before they connect to live systems.
+
+### Who does Oystershell work with on AI projects?
+Oystershell works alongside specialist AI integration partners and cyber security providers, bringing them in where a project needs build or security expertise.
