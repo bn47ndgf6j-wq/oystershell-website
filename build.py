@@ -26,8 +26,8 @@ PAGES = {
     desc='Ex-venue digital jukeboxes refurbished for home bars and games rooms, surplus stock bought from operators, and over forty years of background music and sound system experience.'),
   'advice': dict(path='/advice/', title='Hospitality management advice and product development | Oystershell',
     desc='Commercial strategy, interim sales and marketing leadership, route to market, product development and AI advice for technology, music and payments companies selling into UK hospitality.'),
-  'ai': dict(path='/ai-strategy/', title='AI strategy and integration for hospitality | Oystershell',
-    desc='Practical AI strategy for UK hospitality businesses and their technology suppliers: smarter ordering and upsell, demand forecasting, ongoing marketing and secure, UK GDPR-compliant integration with specialist partners.'),
+  'ai': dict(path='/ai-strategy/', title='AI consultancy and strategy for hospitality | Oystershell',
+    desc='AI consultancy and management advice for UK pubs, bars, restaurants, leisure venues and hospitality technology suppliers: AI strategy, ordering and upsell, demand forecasting, marketing and secure, UK GDPR-compliant integration.'),
   'about': dict(path='/about/', title='About Oystershell | UK hospitality technology consultancy since 1999',
     desc='Oystershell Limited was founded in 1999 in Northampton. Its experience in UK hospitality sales, music and payments goes back to 1982.'),
   'experience': dict(path='/experience/', title='Experience | Oystershell',
@@ -35,7 +35,7 @@ PAGES = {
   'reviews': dict(path='/reviews/', title='Client reviews | Oystershell',
     desc='What clients say about working with Oystershell.', noindex=True, hidden=True),
   'contact': dict(path='/contact/', title='Contact Oystershell | Book a call',
-    desc='Talk to Oystershell about contactless installs, battery packs, jukeboxes or commercial advice. Email james@oystershell.co.uk.'),
+    desc='Talk to Oystershell about contactless installs, battery packs, jukeboxes, commercial advice or AI strategy. Email james@oystershell.co.uk.'),
   'privacy': dict(path='/privacy/', title='Privacy policy | Oystershell', desc='How Oystershell Limited collects and uses personal information.'),
   'terms': dict(path='/terms/', title='Terms of use | Oystershell', desc='Terms of use for the Oystershell Limited website.'),
 }
@@ -46,7 +46,7 @@ for n in HIDDEN: del PAGES[n]
 
 FAQ = {
   'home': [
-    ('What does Oystershell do?', 'Oystershell is a UK commercial and sales consultancy for hospitality technology. It leads sales and marketing for Kashing, supplies certified lithium battery packs, sells refurbished digital jukeboxes, and advises companies selling into pubs, bars and leisure venues.'),
+    ('What does Oystershell do?', 'Oystershell is a UK commercial and sales consultancy for hospitality technology. It leads sales and marketing for Kashing, supplies certified lithium battery packs, sells refurbished digital jukeboxes, and gives management and AI advice to companies selling into pubs, bars and leisure venues.'),
     ('Where is Oystershell based?', 'Oystershell Limited is based in Northampton and works across the UK. It is registered in England and Wales, company number 03856081.'),
     ('Who does Oystershell work with?', 'Technology, music and payments companies, machine operators and venue owners in UK hospitality, leisure and unattended retail.'),
   ],
@@ -72,6 +72,8 @@ FAQ = {
     ('Do you help with product development?', 'Yes, from customer-side input to research and development, through hardware specification and certification, to venue pilots and launch.'),
   ],
   'ai': [
+    ('Do you offer AI consultancy for hospitality businesses in the UK?', 'Yes. Oystershell provides AI consultancy and management advice for UK pubs, bars, restaurants, leisure venues and the technology companies that supply them, from first audit and AI strategy through to pilot, rollout and staff training.'),
+    ('What does AI management advice cover?', 'It covers where AI fits in your business and where it does not: an audit of your data, systems and people, a short list of AI uses ranked by payback and risk, a measured pilot, and a plan to scale, train staff and keep data secure under UK GDPR.'),
     ('How can AI help a pub, bar or hospitality business?', 'The most useful areas are ordering and upsell prompts, demand and staffing forecasts from trading data, review replies and social content written in the business voice and checked by a person, and chat or booking assistants that handle routine questions out of hours.'),
     ('Do you need to be a large operator to use AI?', 'No. Many useful tools are low-cost subscriptions. The best start is one clear problem, piloted in one venue or product line and measured against a baseline.'),
     ('Is it safe to use customer data with AI?', 'Only with the right controls. UK GDPR applies, payment and personal data should stay out of tools that do not need it, and staff need clear rules on what can be shared. Integrations should be reviewed by cyber security specialists before they connect to live systems.'),
@@ -89,7 +91,7 @@ def org_ld():
     'address': {'@type': 'PostalAddress', 'streetAddress': '3 Neale Close, Weston Favell', 'addressLocality': 'Northampton', 'postalCode': 'NN3 3DB', 'addressCountry': 'GB'},
     'areaServed': 'GB',
     'sameAs': ['https://www.linkedin.com/in/jamesluckoystershell/', 'https://www.ebay.co.uk/usr/oystershelllimited'],
-    'knowsAbout': ['Hospitality sales', 'Contactless payments', 'Unattended payments', 'Lithium battery packs', 'Digital jukeboxes', 'Background music', 'Product development', 'AI strategy', 'AI integration'],
+    'knowsAbout': ['Hospitality sales', 'Contactless payments', 'Unattended payments', 'Lithium battery packs', 'Digital jukeboxes', 'Background music', 'Product development', 'AI strategy', 'AI integration', 'AI consultancy for hospitality'],
   }
 
 def page_ld(name, meta):
@@ -105,10 +107,16 @@ def page_ld(name, meta):
         'additionalProperty': [{'@type': 'PropertyValue', 'name': n, 'value': v} for n, v in props]})
   services = {'contactless': 'Contactless payment installation for coin-operated machines',
               'advice': 'Hospitality management advice and product development',
-              'ai': 'AI strategy and integration for hospitality businesses',
+              'ai': 'AI consultancy, strategy and integration for hospitality businesses',
               'jukeboxes': 'Refurbished digital jukeboxes and background music advice'}
   if name in services:
-    graph.append({'@type': 'Service', 'name': services[name], 'provider': {'@id': SITE + '/#org'}, 'areaServed': 'GB'})
+    svc = {'@type': 'Service', 'name': services[name], 'provider': {'@id': SITE + '/#org'}, 'areaServed': 'GB', 'url': SITE + meta['path']}
+    if name == 'ai':
+      svc.update({'serviceType': 'AI consultancy', 'alternateName': ['AI management advice for hospitality', 'AI strategy consulting for pubs, bars and restaurants'],
+        'description': meta['desc'], 'audience': {'@type': 'BusinessAudience', 'audienceType': 'Hospitality operators and hospitality technology suppliers'},
+        'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': 'AI services', 'itemListElement': [{'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n}} for n in
+          ['AI readiness audit', 'AI strategy and prioritisation', 'AI pilot in one venue or product line', 'AI rollout and staff training', 'AI data security and UK GDPR review']]}})
+    graph.append(svc)
   if name in FAQ:
     graph.append({'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ[name]]})
   if name != 'home':

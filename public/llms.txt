@@ -10,18 +10,18 @@ Oystershell leads sales and marketing for Kashing, a UK unattended contactless p
 - [14.8V 20Ah and 40Ah lithium battery packs, UN38.3 certified](https://www.oystershell.co.uk/batteries/): Certified 296 Wh and 592 Wh lithium-ion battery packs for machines with no mains socket: pool tables, kiosks and payment terminals. Smart SMBus fuel gauge, UN38.3 tested, shipped as dangerous goods.
 - [Refurbished digital jukeboxes and venue background music](https://www.oystershell.co.uk/jukeboxes/): Ex-venue digital jukeboxes refurbished for home bars and games rooms, surplus stock bought from operators, and over forty years of background music and sound system experience.
 - [Hospitality management advice and product development](https://www.oystershell.co.uk/advice/): Commercial strategy, interim sales and marketing leadership, route to market, product development and AI advice for technology, music and payments companies selling into UK hospitality.
-- [AI strategy and integration for hospitality](https://www.oystershell.co.uk/ai-strategy/): Practical AI strategy for UK hospitality businesses and their technology suppliers: smarter ordering and upsell, demand forecasting, ongoing marketing and secure, UK GDPR-compliant integration with specialist partners.
+- [AI consultancy and strategy for hospitality](https://www.oystershell.co.uk/ai-strategy/): AI consultancy and management advice for UK pubs, bars, restaurants, leisure venues and hospitality technology suppliers: AI strategy, ordering and upsell, demand forecasting, marketing and secure, UK GDPR-compliant integration.
 
 ## Company
 
 - [About](https://www.oystershell.co.uk/about/): Oystershell Limited was founded in 1999 in Northampton. Its experience in UK hospitality sales, music and payments goes back to 1982.
 - [Experience](https://www.oystershell.co.uk/experience/): Forty years of UK hospitality technology: cashless payments, digital jukeboxes, background music, board leadership and field sales.
-- [Contact](https://www.oystershell.co.uk/contact/): Talk to Oystershell about contactless installs, battery packs, jukeboxes or commercial advice. Email james@oystershell.co.uk.
+- [Contact](https://www.oystershell.co.uk/contact/): Talk to Oystershell about contactless installs, battery packs, jukeboxes, commercial advice or AI strategy. Email james@oystershell.co.uk.
 
 ## Frequently asked questions
 
 ### What does Oystershell do?
-Oystershell is a UK commercial and sales consultancy for hospitality technology. It leads sales and marketing for Kashing, supplies certified lithium battery packs, sells refurbished digital jukeboxes, and advises companies selling into pubs, bars and leisure venues.
+Oystershell is a UK commercial and sales consultancy for hospitality technology. It leads sales and marketing for Kashing, supplies certified lithium battery packs, sells refurbished digital jukeboxes, and gives management and AI advice to companies selling into pubs, bars and leisure venues.
 
 ### Where is Oystershell based?
 Oystershell Limited is based in Northampton and works across the UK. It is registered in England and Wales, company number 03856081.
@@ -67,6 +67,12 @@ Yes. Every product and strategy project now looks at where AI could add features
 
 ### Do you help with product development?
 Yes, from customer-side input to research and development, through hardware specification and certification, to venue pilots and launch.
+
+### Do you offer AI consultancy for hospitality businesses in the UK?
+Yes. Oystershell provides AI consultancy and management advice for UK pubs, bars, restaurants, leisure venues and the technology companies that supply them, from first audit and AI strategy through to pilot, rollout and staff training.
+
+### What does AI management advice cover?
+It covers where AI fits in your business and where it does not: an audit of your data, systems and people, a short list of AI uses ranked by payback and risk, a measured pilot, and a plan to scale, train staff and keep data secure under UK GDPR.
 
 ### How can AI help a pub, bar or hospitality business?
 The most useful areas are ordering and upsell prompts, demand and staffing forecasts from trading data, review replies and social content written in the business voice and checked by a person, and chat or booking assistants that handle routine questions out of hours.
