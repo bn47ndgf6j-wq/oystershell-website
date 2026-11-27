@@ -75,7 +75,7 @@ FAQ = {
     ('How can AI help a pub, bar or hospitality business?', 'The most useful areas are ordering and upsell prompts, demand and staffing forecasts from trading data, review replies and social content written in the business voice and checked by a person, and chat or booking assistants that handle routine questions out of hours.'),
     ('Do you need to be a large operator to use AI?', 'No. Many useful tools are low-cost subscriptions. The best start is one clear problem, piloted in one venue or product line and measured against a baseline.'),
     ('Is it safe to use customer data with AI?', 'Only with the right controls. UK GDPR applies, payment and personal data should stay out of tools that do not need it, and staff need clear rules on what can be shared. Integrations should be reviewed by cyber security specialists before they connect to live systems.'),
-    ('Who does Oystershell work with on AI projects?', 'Oystershell works alongside specialist AI integration partners and cyber security providers, bringing them in where a project needs build or security expertise.'),
+    ('Who does Oystershell work with on AI projects?', 'Oystershell works alongside specialist AI integration partners and cyber security providers, including AIVS Software, a UK developer of private, on-premise AI systems for defence and regulated organisations. Partners are brought in where a project needs build or security expertise.'),
   ],
 }
 
