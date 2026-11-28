@@ -262,7 +262,8 @@ for f in B.glob('*'):
 if (ROOT / 'images').exists(): shutil.copytree(ROOT / 'images', OUT / 'images', ignore=shutil.ignore_patterns('*.md'))
 
 # sitemap, robots, llms.txt, headers
-urls = ''.join(f'<url><loc>{SITE}{m["path"]}</loc><changefreq>monthly</changefreq><priority>{"1.0" if n == "home" else "0.8" if n in FAQ else "0.4"}</priority></url>' for n, m in PAGES.items() if not m.get('noindex'))
+LASTMOD = {'home': '2026-11-28', 'advice': '2026-11-28', 'ai': '2026-11-28', 'about': '2026-11-28', 'contact': '2026-11-28'}  # update when a page changes
+urls = ''.join(f'<url><loc>{SITE}{m["path"]}</loc>' + (f'<lastmod>{LASTMOD[n]}</lastmod>' if n in LASTMOD else '') + '<changefreq>monthly</changefreq><priority>{"1.0" if n == "home" else "0.8" if n in FAQ else "0.4"}</priority></url>' for n, m in PAGES.items() if not m.get('noindex'))
 (OUT / 'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
 (OUT / 'robots.txt').write_text('''# Search engines and AI assistants are welcome.
 User-agent: *
